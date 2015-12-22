@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "noDivan", "noDivan\noDivan.csproj", "{9EBE0673-287C-4363-B4A6-2A020DB9F570}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "noDivan.App", "noDivan.App\noDivan.App.csproj", "{8B601D0B-3596-45B3-97AD-BE43D0F4B982}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9EBE0673-287C-4363-B4A6-2A020DB9F570}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EBE0673-287C-4363-B4A6-2A020DB9F570}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EBE0673-287C-4363-B4A6-2A020DB9F570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B601D0B-3596-45B3-97AD-BE43D0F4B982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B601D0B-3596-45B3-97AD-BE43D0F4B982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B601D0B-3596-45B3-97AD-BE43D0F4B982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B601D0B-3596-45B3-97AD-BE43D0F4B982}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

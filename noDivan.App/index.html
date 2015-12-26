@@ -206,12 +206,93 @@
                 }
         }
     </style>
+
+    <!--login facebook-->
+    <style type="text/css">
+        #login-dp {
+            min-width: 250px;
+            padding: 14px 14px 0;
+            overflow: hidden;
+            background-color: rgba(255,255,255,.8);
+        }
+
+            #login-dp .help-block {
+                font-size: 12px;
+            }
+
+            #login-dp .bottom {
+                background-color: rgba(255,255,255,.8);
+                border-top: 1px solid #ddd;
+                clear: both;
+                padding: 14px;
+            }
+
+            #login-dp .social-buttons {
+                margin: 12px 0;
+            }
+
+                #login-dp .social-buttons a {
+                    width: 49%;
+                }
+
+            #login-dp .form-group {
+                margin-bottom: 10px;
+            }
+
+        .btn-fb {
+            color: #fff;
+            background-color: #3b5998;
+        }
+
+            .btn-fb:hover {
+                color: #fff;
+                background-color: #496ebc;
+            }
+
+        .btn-tw {
+            color: #fff;
+            background-color: #55acee;
+        }
+
+            .btn-tw:hover {
+                color: #fff;
+                background-color: #59b5fa;
+            }
+
+        @media(max-width:768px) {
+            #login-dp {
+                background-color: inherit;
+                color: #fff;
+            }
+
+                #login-dp .bottom {
+                    background-color: inherit;
+                    border-top: 0 none;
+                }
+        }
+    </style>
+
+    <!--navbar login-->
+    <style type="text/css">
+        .navbar-login {
+            width: 305px;
+            padding: 10px;
+            padding-bottom: 0px;
+        }
+
+        .navbar-login-session {
+            padding: 10px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+
+        .icon-size {
+            font-size: 87px;
+        }
+    </style>
+
 </head>
 <body>
-
-    <!--div class="container"-->
-    <!--Navbar-->
-    <!--nav class="navbar navbar-default"-->
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -270,332 +351,412 @@
                             <li><a href="#"><i class="glyphicon glyphicon-plus"></i> More..</a></li>
                         </ul>
                     </li>
+<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        Login via
+                                        <div class="social-buttons">
+                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                        </div>
+                                        or
+                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> keep me logged-in
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="bottom text-center">
+                                        New here ? <a href="#"><b>Join Us</b></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <strong>Nombre</strong>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="navbar-login">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="text-center">
+                                                <span class="glyphicon glyphicon-user icon-size"></span>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="text-left"><strong>Nombre Apellido</strong></p>
+                                            <p class="text-left small">correoElectronico@email.com</p>
+                                            <p class="text-left">
+                                                <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="navbar-login navbar-login-session">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <p>
+                                                <a href="#" class="btn btn-danger btn-block">Cerrar Sesion</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+        <!--Navbar-->
 
 
-    <div class="container-fluid">
-        <!--TImeline
-                <div class="container">
-                    <div class="page-header">
-                        <h1 id="timeline">Timeline</h1>
-                    </div>
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-badge">
-                                <i class="glyphicon glyphicon-check"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-
-                                    <p>
-                                        <small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small>
-                                    </p>
+        <div class="container-fluid">
+            <!--TImeline
+                    <div class="container">
+                        <div class="page-header">
+                            <h1 id="timeline">Timeline</h1>
+                        </div>
+                        <ul class="timeline">
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="glyphicon glyphicon-check"></i>
                                 </div>
-                                <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-badge warning">
-                                <i class="glyphicon glyphicon-credit-card"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
 
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
 
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                                    <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-badge danger">
-                                <i class="glyphicon glyphicon-credit-card"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-badge info">
-                                <i class="glyphicon glyphicon-floppy-disk"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                                    <hr>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                                            <i class="glyphicon glyphicon-cog"></i>  <span class="caret"></span>
-
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li>
-                                                <a href="#">Action</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Another action</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Something else here</a>
-                                            </li>
-                                            <li class="divider"></li>
-                                            <li>
-                                                <a href="#">Separated link</a>
-                                            </li>
-                                        </ul>
+                                        <p>
+                                            <small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge warning">
+                                    <i class="glyphicon glyphicon-credit-card"></i>
                                 </div>
-                                <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-badge success">
-                                <i class="glyphicon glyphicon-thumbs-up"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
 
-                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
 
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                        <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+                                    </div>
                                 </div>
-                                <div class="timeline-body">
-                                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                            </li>
+                            <li>
+                                <div class="timeline-badge danger">
+                                    <i class="glyphicon glyphicon-credit-card"></i>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+
+                                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+
+                                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge info">
+                                    <i class="glyphicon glyphicon-floppy-disk"></i>
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+
+                                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                        <hr>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                                <i class="glyphicon glyphicon-cog"></i>  <span class="caret"></span>
+
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li>
+                                                    <a href="#">Action</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Another action</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Something else here</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="#">Separated link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+
+                                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge success">
+                                    <i class="glyphicon glyphicon-thumbs-up"></i>
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+
+                                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+            -->
+
+            <div class="media">
+                <div class="media-left">
+                    <a href="#"> <img class="img-circle" data-src="holder.js/64x64" alt="64x64" src="perfil/foto.jpg" data-holder-rendered="true" style="width: 64px; height: 64px;"> </a>
                 </div>
-        -->
-
-        <div class="media"> 
-            <div class="media-left"> 
-                <a href="#"> <img class="img-circle" data-src="holder.js/64x64" alt="64x64" src="perfil/foto.jpg" data-holder-rendered="true" style="width: 64px; height: 64px;"> </a> 
-            </div> 
-            <div class="media-body"> 
-                <h4 class="media-heading">Lorem ipsum dolor sit amet, fusce laoreet tellues.</h4>
-                <small>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet tellus 
-                    vestibulum rhoncus suscipit. Cras lacinia aliquam est, eget cursus tellus tincidunt ut. 
-                    Nunc vitae quam id enim fermentum condimentum id at leo. Integer et tortor vitae dolor 
-                    volutpat volutpat. Integer eget lacinia nisi. Duis vulputate pulvinar nulla, ac posuere velit. 
-                    Nam eu sem euismod, scelerisque sem at, ullamcorper libero. In ornare nec dui quis pulvinar. 
-                    Maecenas eleifend mattis ullamcorper. Vivamus varius urnad.
-                </small> 
-                <h4><a href="#" class="text-muted"><span class="label label-default">ler mais...</span></a></h4>
-            </div> 
-        </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Lorem ipsum dolor sit amet, fusce laoreet tellues.</h4>
+                    <small>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet tellus
+                        vestibulum rhoncus suscipit. Cras lacinia aliquam est, eget cursus tellus tincidunt ut.
+                        Nunc vitae quam id enim fermentum condimentum id at leo. Integer et tortor vitae dolor
+                        volutpat volutpat. Integer eget lacinia nisi. Duis vulputate pulvinar nulla, ac posuere velit.
+                        Nam eu sem euismod, scelerisque sem at, ullamcorper libero. In ornare nec dui quis pulvinar.
+                        Maecenas eleifend mattis ullamcorper. Vivamus varius urnad.
+                    </small>
+                    <h4><a href="#" class="text-muted"><span class="label label-default">ler mais...</span></a></h4>
+                </div>
+            </div>
 
 
-        <!--Painel de timeline-->
-        <div class="col-md-12">
-            <div class="panel">
+            <!--Painel de timeline-->
+            <div class="col-md-12">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="row">
+                            <br>
+                            <div class="col-md-5 col-sm-3 text-left">
+
+                                <div class="col-md-3 col-sm-3 text-left"><a class="story-title" href="#"><img alt="" src="perfil/foto.jpg" style="width:100px;height:100px" class="img-circle"></a></div>
+                                <div class="col-md-9 col-sm-9 text-left"><h3>Repurpose Content to Reach a Wider Audience</h3></div>
+
+
+
+                            </div>
+                            <div class="col-md-7 col-sm-9">
+                                <h3>Repurpose Content to Reach a Wider Audience</h3>
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        <h4><span class="label label-default">97thfloor.com</span></h4><h4>
+                                            <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="#" class="text-muted">Read More</a></small>
+                                        </h4>
+                                    </div>
+                                    <div class="col-xs-3"></div>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <br>
+                            <div class="col-md-2 col-sm-3 text-center">
+                                <a class="story-title" href="#"><img alt="" src="perfil/foto.jpg" style="width:100px;height:100px" class="img-circle"></a>
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <h3>Repurpose Content to Reach a Wider Audience</h3>
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        <h4><span class="label label-default">97thfloor.com</span></h4><h4>
+                                            <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="#" class="text-muted">Read More</a></small>
+                                        </h4>
+                                    </div>
+                                    <div class="col-xs-3"></div>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <br>
+                            <div class="col-md-2 col-sm-3 text-center">
+                                <a class="story-title" href="#"><img alt="" src="perfil/foto.jpg" style="width:100px;height:100px" class="img-circle"></a>
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <h3>Repurpose Content to Reach a Wider Audience</h3>
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        <h4><span class="label label-default">97thfloor.com</span></h4><h4>
+                                            <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="#" class="text-muted">Read More</a></small>
+                                        </h4>
+                                    </div>
+                                    <div class="col-xs-3"></div>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <br>
+                            <div class="col-md-2 col-sm-3 text-center">
+                                <a class="story-title" href="#"><img alt="" src="perfil/foto.jpg" style="width:100px;height:100px" class="img-circle"></a>
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <h3>Repurpose Content to Reach a Wider Audience</h3>
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        <h4><span class="label label-default">97thfloor.com</span></h4><h4>
+                                            <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="#" class="text-muted">Read More</a></small>
+                                        </h4>
+                                    </div>
+                                    <div class="col-xs-3"></div>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                        <hr>
+                        <!--/stories-->
+                        <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Painel de grupo-->
+            <!--Groups-->
+            <h2>Panel Group</h2>
+            <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-body">Panel Content</div>
+                    <div class="panel-footer">Panel footer</div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-body">Panel Content</div>
+                    <div class="panel-footer">Panel footer</div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-body">Panel Content</div>
+                    <div class="panel-footer">Panel footer</div>
+                </div>
+            </div>
+
+
+            <!--Painel com formulario-->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <i class="glyphicon glyphicon-wrench pull-right"></i>
+                        <h4>Submit Request</h4>
+                    </div>
+                </div>
                 <div class="panel-body">
-                    <div class="row">
-                        <br>
-                        <div class="col-md-5 col-sm-3 text-left">
 
-                            <div class="col-md-3 col-sm-3 text-left"><a class="story-title" href="#"><img alt="" src="perfil/foto.jpg" style="width:100px;height:100px" class="img-circle"></a></div>
-                            <div class="col-md-9 col-sm-9 text-left"><h3>Repurpose Content to Reach a Wider Audience</h3></div>
+                    <form class="form form-vertical">
+                        <div class="control-group">
+                            <label>Name</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" placeholder="Enter Name">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label>Title</label>
+                            <div class="controls">
+                                <input type="password" class="form-control" placeholder="Password">
+
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label>Details</label>
+                            <div class="controls">
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label>Select</label>
+                            <div class="controls">
+                                <select class="form-control"><option>General Question</option><option>Server Issues</option><option>Billing Question</option></select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label></label>
+                            <div class="controls">
+                                <button type="submit" class="btn btn-primary">
+                                    Post
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
 
 
-
-                        </div>
-                        <div class="col-md-7 col-sm-9">
-                            <h3>Repurpose Content to Reach a Wider Audience</h3>
-                            <div class="row">
-                                <div class="col-xs-9">
-                                    <h4><span class="label label-default">97thfloor.com</span></h4><h4>
-                                        <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="#" class="text-muted">Read More</a></small>
-                                    </h4>
-                                </div>
-                                <div class="col-xs-3"></div>
-                            </div>
-                            <br><br>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <br>
-                        <div class="col-md-2 col-sm-3 text-center">
-                            <a class="story-title" href="#"><img alt="" src="perfil/foto.jpg" style="width:100px;height:100px" class="img-circle"></a>
-                        </div>
-                        <div class="col-md-10 col-sm-9">
-                            <h3>Repurpose Content to Reach a Wider Audience</h3>
-                            <div class="row">
-                                <div class="col-xs-9">
-                                    <h4><span class="label label-default">97thfloor.com</span></h4><h4>
-                                        <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="#" class="text-muted">Read More</a></small>
-                                    </h4>
-                                </div>
-                                <div class="col-xs-3"></div>
-                            </div>
-                            <br><br>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <br>
-                        <div class="col-md-2 col-sm-3 text-center">
-                            <a class="story-title" href="#"><img alt="" src="perfil/foto.jpg" style="width:100px;height:100px" class="img-circle"></a>
-                        </div>
-                        <div class="col-md-10 col-sm-9">
-                            <h3>Repurpose Content to Reach a Wider Audience</h3>
-                            <div class="row">
-                                <div class="col-xs-9">
-                                    <h4><span class="label label-default">97thfloor.com</span></h4><h4>
-                                        <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="#" class="text-muted">Read More</a></small>
-                                    </h4>
-                                </div>
-                                <div class="col-xs-3"></div>
-                            </div>
-                            <br><br>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <br>
-                        <div class="col-md-2 col-sm-3 text-center">
-                            <a class="story-title" href="#"><img alt="" src="perfil/foto.jpg" style="width:100px;height:100px" class="img-circle"></a>
-                        </div>
-                        <div class="col-md-10 col-sm-9">
-                            <h3>Repurpose Content to Reach a Wider Audience</h3>
-                            <div class="row">
-                                <div class="col-xs-9">
-                                    <h4><span class="label label-default">97thfloor.com</span></h4><h4>
-                                        <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="#" class="text-muted">Read More</a></small>
-                                    </h4>
-                                </div>
-                                <div class="col-xs-3"></div>
-                            </div>
-                            <br><br>
-                        </div>
-                    </div>
-                    <hr>
-                    <!--/stories-->
-                    <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
-                </div>
+                </div><!--/panel content-->
             </div>
         </div>
-
-
-        <!--Painel de grupo-->
-        <!--Groups-->
-        <h2>Panel Group</h2>
-        <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
-        <div class="panel-group">
-            <div class="panel panel-default">
-                <div class="panel-heading">Panel Header</div>
-                <div class="panel-body">Panel Content</div>
-                <div class="panel-footer">Panel footer</div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">Panel Header</div>
-                <div class="panel-body">Panel Content</div>
-                <div class="panel-footer">Panel footer</div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">Panel Header</div>
-                <div class="panel-body">Panel Content</div>
-                <div class="panel-footer">Panel footer</div>
-            </div>
-        </div>
-
-
-        <!--Painel com formulario-->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="panel-title">
-                    <i class="glyphicon glyphicon-wrench pull-right"></i>
-                    <h4>Submit Request</h4>
-                </div>
-            </div>
-            <div class="panel-body">
-
-                <form class="form form-vertical">
-                    <div class="control-group">
-                        <label>Name</label>
-                        <div class="controls">
-                            <input type="text" class="form-control" placeholder="Enter Name">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label>Title</label>
-                        <div class="controls">
-                            <input type="password" class="form-control" placeholder="Password">
-
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label>Details</label>
-                        <div class="controls">
-                            <textarea class="form-control"></textarea>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label>Select</label>
-                        <div class="controls">
-                            <select class="form-control"><option>General Question</option><option>Server Issues</option><option>Billing Question</option></select>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label></label>
-                        <div class="controls">
-                            <button type="submit" class="btn btn-primary">
-                                Post
-                            </button>
-                        </div>
-                    </div>
-
-                </form>
-
-
-            </div><!--/panel content-->
-        </div>
-    </div>
 </body>
 </html>

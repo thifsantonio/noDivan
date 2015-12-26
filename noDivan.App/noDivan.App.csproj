@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\noDivan_logoj.png" />
+    <Content Include="index - Copy.html" />
     <Content Include="index2.html" />
     <Content Include="lib\bootstrap\css\bootstrap.min2.css" />
     <Content Include="testes.html" />

@@ -57,6 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\noDivan_logoj.png" />
+    <Content Include="index2.html" />
+    <Content Include="lib\bootstrap\css\bootstrap.min2.css" />
+    <Content Include="testes.html" />
     <Content Include="lib\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="lib\bootstrap\css\bootstrap-theme.min.css.map" />
     <Content Include="lib\bootstrap\css\bootstrap.css.map" />
@@ -83,6 +87,7 @@
     <Content Include="lib\bootstrap\js\bootstrap.min.js" />
     <Content Include="lib\bootstrap\js\jquery.min.js" />
     <Content Include="lib\bootstrap\js\npm.js" />
+    <Content Include="perfil\foto.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
